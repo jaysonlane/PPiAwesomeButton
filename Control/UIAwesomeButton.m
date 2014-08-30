@@ -225,17 +225,24 @@
 #pragma mark Touches
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	[super touchesBegan:touches withEvent:event];
+    if (self.effectSuper) {
+        [super touchesBegan:touches withEvent:event];
+    }
     [self setControlState:UIControlStateHighlighted];
 }
 
 - (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-	[super touchesCancelled:touches withEvent:event];
+    if (self.effectSuper) {
+        [super touchesCancelled:touches withEvent:event];
+    }
     [self setControlState:UIControlStateNormal];
 }
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    [super touchesEnded:touches withEvent:event];
+    
+    if (self.effectSuper) {
+        [super touchesEnded:touches withEvent:event];
+    }
     //if([self isAwesome])
     [self setControlState:UIControlStateNormal];
     if(self.actionBlock){

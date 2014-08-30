@@ -17,6 +17,8 @@ typedef void (^block)();
 @property (nonatomic,strong) NSDictionary *textAttributes;
 @property (nonatomic,copy)void (^actionBlock)();
 
+@property (nonatomic, assign) BOOL effectSuper;
+
 // Initializers
 +(UIAwesomeButton*)buttonWithType:(UIButtonType)type text:(NSString *)text icon:(NSString *)icon attributes:(NSDictionary *)attributes andIconPosition:(IconPosition)position;
 +(UIAwesomeButton*)buttonWithType:(UIButtonType)type text:(NSString *)text iconImage:(UIImage *)icon attributes:(NSDictionary *)attributes andIconPosition:(IconPosition)position;
