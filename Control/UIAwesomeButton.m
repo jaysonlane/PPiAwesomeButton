@@ -7,7 +7,7 @@
 //
 
 #import "UIAwesomeButton.h"
-#import "UIView+AutoLayout.h"
+#import "ALView+PureLayout.h"
 @interface UIAwesomeButton ()
 @property (nonatomic,strong) NSMutableDictionary *backgroundColors;
 @property (nonatomic,strong) NSMutableDictionary *attributes;
